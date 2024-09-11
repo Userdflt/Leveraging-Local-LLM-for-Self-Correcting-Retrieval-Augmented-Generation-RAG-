@@ -1,6 +1,6 @@
 # Retrieval-Augmented Generation (RAG) from PDFs with Local Vector Storage (ChromaDB), Enhanced Reflection, and Iterative Self-Correction
 
-[CLICK FOR NOTEBOOK - CODE](file-url)
+[CLICK FOR NOTEBOOK - CODE](Local_RAG_LLM.ipynb)
 
 
 ## Problem Statement
