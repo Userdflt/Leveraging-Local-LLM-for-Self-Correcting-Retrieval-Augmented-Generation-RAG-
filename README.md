@@ -1,6 +1,6 @@
 # Retrieval-Augmented Generation (RAG) from PDFs with Local Vector Storage (ChromaDB), Enhanced Reflection, and Iterative Self-Correction
 
-![Diagram](mermaid-diagram-2024-09-11-172236.png)
+![Diagram](mermaid-diagram-2024-09-11-202622.png)
 
 [CLICK FOR NOTEBOOK - CODE](Local_RAG_LLM.ipynb)
 
