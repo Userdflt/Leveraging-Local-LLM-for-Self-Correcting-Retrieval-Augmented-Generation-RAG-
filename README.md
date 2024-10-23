@@ -1,4 +1,4 @@
-# Retrieval-Augmented Generation (RAG) from PDFs with Local Vector Storage (ChromaDB), Enhanced Reflection, and Iterative Self-Correction
+# ReflectiveRAG: Self-Correcting Retrieval-Augmented Generation with Local Vector Storage
 
 ![Diagram](mermaid-diagram-2024-09-11-202622.png)
 
