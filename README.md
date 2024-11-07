@@ -1,11 +1,11 @@
-# ReflectiveRAG: Self-Correcting Retrieval-Augmented Generation with Local Vector Storage
+# Adaptive Local LLM Agent for Self-Correcting Retrieval-Augmented Generation
 
 ![Diagram](mermaid-diagram-2024-09-11-202622.png)
 
 [CLICK FOR NOTEBOOK - CODE](Local_RAG_LLM.ipynb)
 
 
-Yes, the code you've provided can be considered an **AI agent**. It implements a system that autonomously performs a series of actions to answer user questions effectively. Here's why it qualifies as an AI agent:
+It implements a system that autonomously performs a series of actions to answer user questions effectively.
 
 1. **Autonomous Decision-Making**: The system decides whether to retrieve documents from a local vector store or perform a web search based on the user's question. This decision-making process is handled by the `indicator` function, which routes the question appropriately.
 
