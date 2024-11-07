@@ -5,51 +5,23 @@
 [CLICK FOR NOTEBOOK - CODE](Local_RAG_LLM.ipynb)
 
 
-## Problem Statement
-This project aims to enhance the efficiency of answering user queries based on PDFs using Retrieval-Augmented Generation (RAG). The core focus is to refine the retrieval process, ensuring relevant document retrieval, improving the response accuracy through reflection, and employing self-correction mechanisms. The system utilizes local vector storage, managed via **ChromaDB**, to store and retrieve document embeddings efficiently.
+Yes, the code you've provided can be considered an **AI agent**. It implements a system that autonomously performs a series of actions to answer user questions effectively. Here's why it qualifies as an AI agent:
 
-## Industry/Domain Context
-This method is highly relevant to industries requiring robust document processing and retrieval, such as legal, research, and corporate environments. The system's capability to extract relevant insights from PDFs enhances decision-making processes, especially in document-heavy fields.
+1. **Autonomous Decision-Making**: The system decides whether to retrieve documents from a local vector store or perform a web search based on the user's question. This decision-making process is handled by the `indicator` function, which routes the question appropriately.
 
-## Business Question
-- How can we efficiently retrieve and generate responses from PDFs using local vector storage to minimize costs and ensure accuracy?
+2. **Perception and Interaction with the Environment**:
+   - **Retrieval**: It interacts with a local vector store (Chroma DB) to retrieve relevant documents based on the user's question.
+   - **Web Search**: If necessary, it performs a web search to gather additional information.
 
-## Data Question
-- How can document embeddings be leveraged in local vector storage to improve retrieval accuracy?
+3. **Action Execution**:
+   - **Generation**: Uses a language model (LLM) to generate answers from the retrieved documents.
+   - **Reflection**: Implements a reflection mechanism to assess the completeness and accuracy of the generated answer, potentially updating it with more information.
+   - **Hallucination Checking**: Evaluates the generated answer for factual correctness, ensuring reliability.
 
-## Data Overview
-- The project uses **ChromaDB** for local vector storage of document embeddings. The embedding function utilizes the **"mxbai-embed-large"** model from **Ollama**. The documents are processed using a text-splitter that divides them into chunks for efficient retrieval.
+4. **Goal-Oriented Behavior**: The agent's goal is to provide accurate and comprehensive answers to user questions. It employs strategies like relevance grading and reflection to improve the quality of its responses.
 
-## Process (more PDF files can be added)
-1. **Data Preprocessing**:
-    - PDFs are split into manageable chunks using the `RecursiveCharacterTextSplitter`. Each chunk is indexed by source and page for easy retrieval.
-2. **Document Storage and Retrieval** (with update function if new files added):
-    - The system uses **ChromaDB** to create collections of embeddings. New chunks are processed and added to the local database. 
-    - **ChromaEmbeddingFunction** is used to create vector embeddings for retrieval.
-3. **Vector Store Queries**:
-    - Queries like "What are the permitted activities?" invoke the retriever, which pulls relevant chunks from **ChromaDB** based on similarity.
+5. **Workflow Management**: Utilizes a state graph to manage the workflow of tasks, making conditional decisions and looping through processes like retrieval and generation as needed.
 
-## Modeling
-The system uses multiple models and processes to ensure accurate results:
-- **Retrieval Grading**: A local model (**Llama3.1**) assesses the relevance of retrieved documents using a scoring mechanism that checks if the document contains keywords related to the query.
-- **Answer Generation**: A local **RAG (Retrieval-Augmented Generation)** model generates answers based on the retrieved documents, ensuring a structured response.
-- **Hallucination Checking**: Another instance of the **Llama3.1** model verifies whether the generated answer contains hallucinations or fabricated information.
-- **Reflection**: The reflection process compares the generated response with the retrieved documents and suggests improvements if the answer lacks crucial information.
+6. **Adaptability**: The system can adapt its actions based on the outcomes of previous steps (e.g., if the reflection step deems the answer incomplete, it will update the documents and regenerate the answer).
 
-## Comparisons and Improvements
-- **Retrieval Quality**: The system grades the relevance of documents, ensuring only relevant documents are passed to the generation stage. Irrelevant documents trigger additional retrieval or web search as a fallback.
-- **Answer Generation**: The generated answers are refined through iterative reflection and hallucination checks. Incomplete answers are revisited, and documents are updated with missing information.
-
-## Outcomes
-- **Enhanced Retrieval**: By storing embeddings locally in **ChromaDB**, retrieval speed and accuracy are improved without relying on external API calls.
-- **Improved Answer Quality**: Iterative self-correction through reflection ensures that incomplete or incorrect answers are flagged and corrected before presenting the final response.
-- **Scalability**: The system's reliance on local vector storage makes it scalable to larger datasets without significant costs related to external storage or processing.
-
-## Data Answer
-- The use of local vector storage with **ChromaDB** allows for efficient retrieval and enhanced reflection processes, improving the relevance of the generated answers and ensuring that incomplete answers are flagged for correction.
-
-## Business Answer
-- This system provides a scalable and cost-effective solution for retrieving and generating accurate responses from PDFs, improving decision-making processes in document-heavy industries.
-
-## End-to-End Solution
-- The system provides an end-to-end solution for querying, retrieving, generating, and refining answers from PDF documents stored in a local vector database. It integrates local models for retrieval grading, hallucination checking, and reflection to ensure high-quality outputs.
+**Summary**: The code embodies the characteristics of an AI agent by autonomously processing user inputs, interacting with various data sources, making decisions, and generating outputs aimed at achieving a specific objective.
