@@ -1,4 +1,4 @@
-# Adaptive Local LLM Agent for Self-Correcting Retrieval-Augmented Generation (RAG)
+# Leveraging Local LLM for Self-Correcting Retrieval-Augmented Generation (RAG)
 
 ![Diagram](mermaid-diagram-2024-09-11-202622.png)
 
