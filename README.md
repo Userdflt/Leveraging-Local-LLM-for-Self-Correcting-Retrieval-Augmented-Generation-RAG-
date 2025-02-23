@@ -1,6 +1,6 @@
 # Leveraging Local LLM for Self-Correcting Retrieval-Augmented Generation (RAG)
 
-![Diagram](mermaid-diagram-2024-09-11-202622.png)
+![Diagram](Blank_diagram.jpeg)
 
 [CLICK FOR NOTEBOOK - CODE](Local_RAG_LLM.ipynb)
 
