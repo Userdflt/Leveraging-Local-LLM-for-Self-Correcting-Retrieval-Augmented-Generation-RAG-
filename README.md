@@ -1,6 +1,6 @@
 # Leveraging Local LLM for Self-Correcting Retrieval-Augmented Generation (RAG)
 
-![Diagram](Blank_diagram.jpeg)
+![Diagram](flow_chart.jpeg)
 
 [CLICK FOR NOTEBOOK - CODE](Local_RAG_LLM.ipynb)
 
