@@ -24,4 +24,4 @@ It implements a system that autonomously performs a series of actions to answer 
 
 6. **Adaptability**: The system can adapt its actions based on the outcomes of previous steps (e.g., if the reflection step deems the answer incomplete, it will update the documents and regenerate the answer).
 
-**Summary**: The code embodies the characteristics of an AI agent by autonomously processing user inputs, interacting with various data sources, making decisions, and generating outputs aimed at achieving a specific objective.
+**Summary**: The project embodies the characteristics of an AI agent by autonomously processing user inputs, interacting with various data sources, making decisions, and generating outputs aimed at achieving a specific objective.
